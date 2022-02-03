@@ -330,6 +330,9 @@ bindsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
 set_from_resource $i3-wm.binding.float_toggle i3-wm.binding.float_toggle Shift+space
 bindsym $mod+Shift+$i3-wm.binding.float_toggle floating toggle
 
+## Modify // Window Stayontop Toggle // <Alt> o ##
+bindsym $mod+o sticky toggle
+
 ## Modify // Move to Scratchpad // <Alt><Shift> m ##
 set_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Shift+m
 bindsym $mod+$i3-wm.binding.move_scratchpad move to scratchpad
@@ -671,6 +674,8 @@ font $i3-wm.font
 ###############################################################################
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
+set_from_resource $i3-wm.bar.output i3-wm.bar.output
+
 set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
 set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput primary
@@ -687,6 +692,7 @@ bar {
   font $i3-wm.bar.font
   separator_symbol $i3-wm.bar.separator
   status_command $i3-wm.bar.status_command
+  output $i3-wm.bar.output
   tray_output $i3-wm.bar.trayoutput
   strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
 
