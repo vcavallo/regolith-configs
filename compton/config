@@ -12,8 +12,8 @@
 
 # Backend to use: "xrender" or "glx".
 # GLX backend is typically much faster but depends on a sane driver.
-# backend = "glx";
-backend = "xrender";
+backend = "glx";
+# backend = "xrender";
 
 #################################
 #
@@ -41,6 +41,7 @@ glx-copy-from-front = false;
 # Recommended if it works.
 glx-no-rebind-pixmap = true;
 use-damage = false
+# use-damage = true
 
 
 # GLX backend: GLX buffer swap method we assume.
