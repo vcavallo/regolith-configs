@@ -118,10 +118,14 @@ set_from_resource $ws10_key i3-wm.workspace.10.key 0
 set_from_resource $i3-wm.binding.terminal i3-wm.binding.terminal Return
 bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
 
+
 ## Launch // Floating Terminal // <><Shift> Enter ##
 # set_from_resource $i3-wm.binding.terminal i3-wm.binding.terminal Shift+Return
 # bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
 bindsym $mod+shift+Return exec gnome-terminal --title 'floatingterm' --geometry=100x40
+
+## Launch // Pasteboard Vim // <Alt>Shift V ##
+bindsym $mod+Shift+v exec gnome-terminal --title 'floatingterm tempvim' -e "tempvim" --geometry=100x40
 
 ## Launch // Browser // <Alt> w ##
 set_from_resource $i3-wm.binding.browser i3-wm.binding.browser w
@@ -148,7 +152,7 @@ set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -s
 bindsym $mod+$i3-wm.binding.launcher.cmd exec $i3-wm.program.launcher.cmd
 
 ## Navigate // Window by Name // <><Alt> ; ##
-set_from_resource $i3-wm.binding.launcher.window i3-wm.binding.launcher.window Mod4+colon
+set_from_resource $i3-wm.binding.launcher.window i3-wm.binding.launcher.window Ctrl+colon
 set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
 bindsym $mod+$i3-wm.binding.launcher.window exec $i3-wm.program.launcher.window
 
@@ -273,6 +277,12 @@ bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/bin/i3-next-work
 
 set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad m
 bindsym $mod+$i3-wm.binding.scratchpad scratchpad show
+
+###############################################################################
+# Userspace Configuration
+###############################################################################
+
+## User Apps // Clipboard manager // <Alt> v ##
 
 ###############################################################################
 # Window and Workspace Configuration
@@ -456,8 +466,8 @@ set_from_resource $i3-wm.binding.shutdown i3-wm.binding.shutdown Shift+p
 set_from_resource $i3-wm.program.shutdown i3-wm.program.shutdown /usr/bin/gnome-session-quit --power-off
 bindsym $mod+$i3-wm.binding.shutdown exec $i3-wm.program.shutdown
 
-## Session // Lock Screen // <> Escape ##
-set_from_resource $i3-wm.binding.lock i3-wm.binding.lock Escape
+## Session // Lock Screen // <> <Shift> x ##
+set_from_resource $i3-wm.binding.lock i3-wm.binding.lock Shift+x
 set_from_resource $i3-wm.program.lock i3-wm.program.lock dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
 bindsym $mod+$i3-wm.binding.lock exec $i3-wm.program.lock
 
@@ -712,6 +722,11 @@ bar {
 ###############################################################################
 # External programs launched with i3
 ###############################################################################
+
+# Greenclip rofi clipboard manager
+set $greenclip /home/vcavallo/bin/greenclip
+bindsym $mod+v exec rofi -modi "clipboard:$greenclip print" -show clipboard
+exec --no-startup-id $greenclip daemon
 
 # Start the installed regolith-compositor
 set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/regolith-compositor/init

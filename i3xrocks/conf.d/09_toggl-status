@@ -1,0 +1,6 @@
+# Show toggl time tracker status
+[toggl-status]
+full_text=toggl entry
+command=echo $(/home/vcavallo/scripts/toggl-status)
+interval=60
+markup=pango
