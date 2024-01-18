@@ -10,9 +10,19 @@ bindsym $mod+$i3-wm.binding.terminal exec --no-startup-id /usr/bin/x-terminal-em
 set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
 bindsym $mod+$i3-wm.binding.browser exec --no-startup-id gnome-terminal --class=floating_window
 
+for_window [class="floating_window"] floating enable
 for_window [class="copyq"] floating enable
 for_window [class="Cheese"] floating enable
+for_window [class="obsidian"] floating enable
 
-## Launch // Ranger // <> f ##
+# ## Launch // Ranger // <> f ##
+# set_from_resource $i3-wm.binding.ranger i3-wm.binding.ranger f
+# bindsym $mod+$i3-wm.binding.ranger exec --no-startup-id gnome-terminal -e ranger --class=floating_window
+
+## Launch // Files // <> f ##
 set_from_resource $i3-wm.binding.ranger i3-wm.binding.ranger f
-bindsym $mod+$i3-wm.binding.ranger exec --no-startup-id gnome-terminal -e ranger --class=floating_window
+bindsym $mod+$i3-wm.binding.ranger exec --no-startup-id nautilus --class=floating_window
+
+## Launch // Screenshot // <Alt> g ##
+set_from_resource $i3-wm.binding.screenshot i3-wm.binding.screenshot g
+bindsym $mod+$i3-wm.binding.screenshot exec --no-startup-id gnome-screenshot -i --class=floating_window

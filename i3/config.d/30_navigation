@@ -83,3 +83,11 @@ bindsym $mod+$i3-wm.binding.ws_prev_on_output2 workspace prev_on_output
 ## Navigate // Scratchpad // <> m ##
 set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad m
 bindsym $mod+$i3-wm.binding.scratchpad scratchpad show
+
+## Modify // Move Workspace Right // <Alt><Ctrl> > ##
+bindsym $mod+Ctrl+period move workspace to output right
+
+## Modify // Move Workspace Left // <Alt><Ctrl> < ##
+bindsym $mod+Ctrl+comma move workspace to output left
+
+

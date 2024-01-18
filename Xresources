@@ -17,6 +17,7 @@ wm.workspace.08.name: 8: 🝓
 wm.workspace.09.name: 9: 🜸
 wm.workspace.10.name: 10: 🝩
 
+wm.gnome.terminal.update: false
 gnome.terminal.update: false
 wm.window.border.size: 2
 wm.floatingwindow.border.size: 2
@@ -26,5 +27,3 @@ gtk.document_font_name: Liberation Sans
 gtk.monospace_font_name: Hack Nerd Font Mono
 wm.font: Liberation Sans
 i3xrocks.value.font: Liberation Sans
-!regolith.look.path: /usr/share/regolith-look/blackhole
-!regolith.look.path: /usr/share/regolith-look/dracula
