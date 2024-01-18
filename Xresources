@@ -1,0 +1,30 @@
+wm.mod: Mod1
+wm.alt: Mod4
+
+wm.bar.position: top
+wm.bar.separator: |
+wm.bar.output: primary
+wm.bar.stripworkspacenumbers: false
+
+wm.workspace.01.name: 1: 🝡
+wm.workspace.02.name: 2: 🜺
+wm.workspace.03.name: 3: 🜽
+wm.workspace.04.name: 4: 🜷
+wm.workspace.05.name: 5: 🜵
+wm.workspace.06.name: 6: 🝐
+wm.workspace.07.name: 7: 🝎
+wm.workspace.08.name: 8: 🝓
+wm.workspace.09.name: 9: 🜸
+wm.workspace.10.name: 10: 🝩
+
+gnome.terminal.update: false
+wm.window.border.size: 2
+wm.floatingwindow.border.size: 2
+wm.gaps.inner.size: 8
+gtk.font_name: Liberation Sans
+gtk.document_font_name: Liberation Sans
+gtk.monospace_font_name: Hack Nerd Font Mono
+wm.font: Liberation Sans
+i3xrocks.value.font: Liberation Sans
+!regolith.look.path: /usr/share/regolith-look/blackhole
+!regolith.look.path: /usr/share/regolith-look/dracula
