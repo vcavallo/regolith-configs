@@ -1,0 +1,15 @@
+i3-wm.mod: Mod1
+i3-wm.alt: Mod4
+i3-wm.bar.position: top
+gnome.terminal.update: false
+Xft.dpi: 200
+i3-wm.window.border.size: 2
+i3-wm.floatingwindow.border.size: 2
+i3-wm.gaps.inner.size: 8
+gtk.font_name: Liberation Sans
+gtk.document_font_name: Liberation Sans
+gtk.monospace_font_name: Hack Nerd Font Mono
+i3-wm.font: Liberation Sans
+i3xrocks.value.font: Liberation Sans
+!regolith.look.path: /usr/share/regolith-look/blackhole
+regolith.look.path: /usr/share/regolith-look/dracula
