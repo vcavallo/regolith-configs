@@ -1,0 +1,18 @@
+###############################################################################
+# Launcher dialogs
+###############################################################################
+
+## Launch // Terminal // <> Enter ##
+set_from_resource $i3-wm.binding.terminal i3-wm.binding.terminal Return
+bindsym $mod+$i3-wm.binding.terminal exec --no-startup-id /usr/bin/x-terminal-emulator
+
+## Launch // Floating Terminal // <><Shift> Enter ##
+set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
+bindsym $mod+$i3-wm.binding.browser exec --no-startup-id gnome-terminal --class=floating_window
+
+for_window [class="copyq"] floating enable
+for_window [class="Cheese"] floating enable
+
+## Launch // Ranger // <> f ##
+set_from_resource $i3-wm.binding.ranger i3-wm.binding.ranger f
+bindsym $mod+$i3-wm.binding.ranger exec --no-startup-id gnome-terminal -e ranger --class=floating_window
